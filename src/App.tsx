@@ -1,24 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import {
+  NORTH_STATION_COMMUTER_ID,
+  ONE_MINUTE,
+  RouteTypes,
+} from "./constants/constants";
+import { getCurrentTime } from "./utils/dates-and-times";
+import useInterval from "./hooks/useInterval";
+import NoticeBoard from "./components/NoticeBoard";
 
 function App() {
+  const [date, setDate] = React.useState<Date>(getCurrentTime());
+
+  useInterval(() => {
+    setDate(getCurrentTime());
+  }, ONE_MINUTE);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NoticeBoard
+        date={date}
+        routeType={RouteTypes.Commuter}
+        stationId={NORTH_STATION_COMMUTER_ID}
+      />
     </div>
   );
 }
