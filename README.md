@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# NoticeBoard
+
+This is a simple web app that mimics the commuter noticeboard at North Station. It polls the MTBA V3 API at 1 minute intervals to keep a record of the next 10 arrivals / departures.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
