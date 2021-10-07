@@ -2,6 +2,20 @@
 
 This is a simple web app that mimics the commuter noticeboard at North Station. It polls the MTBA V3 API at 1 minute intervals to keep a record of the next 10 arrivals / departures.
 
+## Installation
+
+Check that you have node, npm and yarn installed:
+
+`$node --version`
+`$npm --version`
+`$yarn --version`
+
+You can install yarn with `npm -g install yarn`
+This will fetch the latest yarn 1.0 version.
+
+To install the rest of the dependencies, run:
+`yarn install` in root directoy with the yarn.lock file.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
