@@ -74,7 +74,7 @@ const NoticeBoard = ({
                 </Typography>
               </TableCell>
               <TableCell />
-              <TableCell>
+              <TableCell align="right">
                 <Typography variant="h5" color="secondary">
                   {formatTime(date)}
                 </Typography>
@@ -82,7 +82,7 @@ const NoticeBoard = ({
             </TableRow>
           </TableBody>
         </Table>
-        <Table>
+        <Table size="small">
           <TableHead>
             <TableRow>
               <TableCell>
