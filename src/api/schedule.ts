@@ -24,17 +24,15 @@ const api = axios.create({
 
 export const getSchedule = async (
   stationId: string,
-  minTime: Date,
-  maxTime: Date,
   routeType?: number,
+  limit?: number,
 ): Promise<StationSchedule> => {
   const response = await api.get<ApiStationSchedule>("schedules", {
     params: {
       include: "prediction,route",
       "filter[stop]": stationId,
       "filter[route_type]": routeType?.toString(),
-      // "filter[min_time]": getApiTime(minTime),
-      // "filter[max_time]": getApiTime(maxTime),
+      "page[limit]": limit,
     },
   });
 

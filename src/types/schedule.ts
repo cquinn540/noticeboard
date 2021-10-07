@@ -18,8 +18,8 @@ export interface Schedule extends Item {
 }
 
 export interface ScheduleAttributes {
-  arrival_time: Date | null;
-  departure_time: Date | null;
+  arrival_time: string | null;
+  departure_time: string | null;
   direction_id: number;
   drop_off_type: number;
   pickup_type: number;
