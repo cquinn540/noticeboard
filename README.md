@@ -6,9 +6,9 @@ This is a simple web app that mimics the commuter noticeboard at North Station. 
 
 Check that you have node, npm and yarn installed:
 
-`$node --version`
-`$npm --version`
-`$yarn --version`
+`node --version`
+`npm --version`
+`yarn --version`
 
 You can install yarn with `npm -g install yarn`
 This will fetch the latest yarn 1.0 version.
