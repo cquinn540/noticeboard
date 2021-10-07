@@ -36,12 +36,12 @@ const NoticeBoard = ({
     React.useState<StationSchedule | null>(null);
 
   React.useEffect(() => {
-    getSchedule(stationId, routeType, limit)
+    getSchedule(date, stationId, routeType, limit)
       .then((newSchedule) => {
         setStationSchedule(newSchedule);
       })
       .catch((error) => alert(error));
-  }, [stationId, routeType, limit]);
+  }, [date, stationId, routeType, limit]);
 
   if (!stationSchedule) {
     return <div>Loading...</div>;
